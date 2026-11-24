@@ -1,0 +1,21 @@
+{
+  "model": "tfidf_logreg",
+  "mlflow_run_id": "b8d07bc776094d5fae39132bc213c9ea",
+  "test_accuracy": 0.997564935064935,
+  "test_macro_f1": 0.9975735952192322,
+  "test_weighted_f1": 0.9975641485968225,
+  "noisy_test_accuracy": 0.992288961038961,
+  "noisy_test_macro_f1": 0.9920993728446177,
+  "ece_raw": 0.008869764647948863,
+  "ece_temperature_scaled": 0.0014181484555723439,
+  "temperature": 0.5156732244854967,
+  "ood_method": "energy",
+  "oos_auroc": 0.9973120941558442,
+  "oos_fpr_at_95tpr": 0.006,
+  "oos_recall_at_threshold": 0.994,
+  "in_scope_accept_rate": 0.9565746753246753,
+  "end_to_end_in_scope_accuracy": 0.9549512987012987,
+  "n_test": 2464,
+  "n_oos_test": 1000,
+  "sample_escalation_rate": 0.75
+}

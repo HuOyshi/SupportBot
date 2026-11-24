@@ -1,0 +1,101 @@
+# SupportBot configuration. All paths are relative to the project root.
+
+seed: 42
+
+data:
+  dir: data
+  bitext_repo: bitext/Bitext-customer-support-llm-chatbot-training-dataset
+  bitext_file: Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv
+  clinc_repo: clinc/clinc_oos            # used ONLY to test out-of-scope detection
+  val_size: 0.1                          # stratified split of Bitext
+  test_size: 0.1
+  noise_rate: 0.15                       # share of words corrupted in the robustness test
+
+mlflow:
+  tracking_dir: mlruns
+  experiment: supportbot-intent-classification
+  log_model_files: false   # true = also copy model weights into mlruns (makes the repo much bigger)
+
+# Out-of-scope (OOS) detection: a message is rejected when its score is below a
+# threshold chosen so that `keep_in_scope` of in-scope VALIDATION messages pass.
+ood:
+  keep_in_scope: 0.95
+  method: auto        # msp | temp_msp | energy | auto (= best AUROC on the out-of-scope VALIDATION set)
+
+# Each entry is one MLflow run. Set enabled: false to skip a run.
+runs:
+  - name: tfidf_logreg
+    type: tfidf_logreg
+    enabled: true
+    params:
+      C: 10.0
+      max_features: 30000
+      word_ngrams: [1, 2]
+      char_ngrams: [2, 5]
+
+  - name: naive_bayes_scratch
+    type: naive_bayes_scratch
+    enabled: true
+    params:
+      alpha: 0.5                         # Laplace/Lidstone smoothing
+      ngram_max: 2
+      min_df: 2
+
+  - name: transformer_scratch_word
+    type: transformer_scratch
+    enabled: true
+    params:
+      use_char_ngrams: false             # word embeddings only
+      d_model: 128
+      n_heads: 4
+      n_layers: 2
+      ff_dim: 256
+      dropout: 0.1
+      max_len: 32
+      batch_size: 64
+      epochs: 12
+      lr: 0.001
+      weight_decay: 0.01
+      label_smoothing: 0.1
+      patience: 3
+      char_buckets: 20000          # hash buckets for character n-grams
+
+  - name: transformer_scratch_subword
+    type: transformer_scratch
+    enabled: true
+    params:
+      use_char_ngrams: true              # + hashed character n-grams (robust to typos)
+      d_model: 128
+      n_heads: 4
+      n_layers: 2
+      ff_dim: 256
+      dropout: 0.1
+      max_len: 32
+      batch_size: 64
+      epochs: 12
+      lr: 0.001
+      weight_decay: 0.01
+      label_smoothing: 0.1
+      patience: 3
+      char_buckets: 20000          # hash buckets for character n-grams
+
+  # Transfer learning with a pre-trained Transformer. Downloads ~260 MB and is
+  # slow on a CPU, so it is off by default. Turn on if you have time or a GPU.
+  - name: distilbert_finetune
+    type: distilbert_finetune
+    enabled: false
+    params:
+      model: distilbert-base-uncased
+      max_len: 48
+      batch_size: 32
+      epochs: 1
+      lr: 0.00005
+      max_train_samples: 6000            # use a subset to keep CPU training short
+
+# Prediction / app settings
+predict:
+  low_confidence: 0.5                    # escalate if calibrated confidence is below this
+  top_k: 3
+  escalate_intents: [complaint, contact_human_agent, payment_issue]
+  frustration_words: [angry, worst, terrible, ridiculous, unacceptable, useless, scam,
+                      fraud, disgusting, furious, horrible, awful, "!!!"]

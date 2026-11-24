@@ -1,0 +1,25 @@
+text,true,predicted
+help creating account,registration_problems,create_account
+i do not know what i need to do to find the invoice #37777,check_invoice,get_invoice
+order cancellation,cancel_order,change_order
+pudate {{Account Type}} account,edit_account,delete_account
+can ya help me check how long reimbursemenst take,check_refund_policy,delivery_period
+downlpoad bills from {{Person Name}},get_invoice,check_invoice
+I need help checking how long rdimbursements take,check_refund_policy,delivery_period
+I don't know how I could edit my bloody account,edit_account,delete_account
+can you help me cancelling the bloody purchase I made?,cancel_order,newsletter_subscription
+I have issues  trying to register,registration_problems,change_shipping_address
+i want assistance tocancel order {{Order Number}},cancel_order,track_order
+I have a question about opening user profiles,registration_problems,create_account
+can uhelp melocate order {{Order Number}},track_order,change_order
+give me information about the shippong periods,delivery_period,delete_account
+have a problem with a key reset,recover_password,registration_problems
+are the service charges refundable?,check_refund_policy,check_cancellation_fee
+where can i inform of a paymen error,payment_issue,registration_problems
+update purchase00123842,change_order,change_shipping_address
+refunding {{Refund Amount}}  dollars,get_refund,track_refund
+when can I expect a refund,get_refund,track_refund
+modify order00123842,change_order,change_shipping_address
+how can i tfack purchase {{Order Number}},track_order,change_order
+switching user,switch_account,recover_password
+i need help gettng bill #00108,get_invoice,check_invoice

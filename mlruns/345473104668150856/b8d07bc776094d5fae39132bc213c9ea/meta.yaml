@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/SICIP%20MLDL/project2/supportbot/supportbot/mlruns/345473104668150856/b8d07bc776094d5fae39132bc213c9ea/artifacts
+end_time: 1795522494954
+entry_point_name: ''
+experiment_id: '345473104668150856'
+lifecycle_stage: active
+run_id: b8d07bc776094d5fae39132bc213c9ea
+run_name: tfidf_logreg
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795522480857
+status: 3
+tags: []
+user_id: Hp

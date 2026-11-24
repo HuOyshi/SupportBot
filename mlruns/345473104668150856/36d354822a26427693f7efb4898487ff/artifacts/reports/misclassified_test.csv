@@ -1,0 +1,5 @@
+text,true,predicted
+help creating account,registration_problems,create_account
+I need an {{Account Type}} account,create_account,switch_account
+when can I expect a refund,get_refund,track_refund
+how can i tfack purchase {{Order Number}},track_order,change_order

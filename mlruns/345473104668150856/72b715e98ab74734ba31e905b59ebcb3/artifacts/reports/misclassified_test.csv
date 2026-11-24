@@ -1,0 +1,12 @@
+text,true,predicted
+want help seeing ur pzyment options,check_payment_methods,delivery_options
+order cancellation,cancel_order,place_order
+need help to correc order {{Order Number}},change_order,track_order
+how long does the shipping take,delivery_period,check_refund_policy
+need help with switching some articles of an order,change_order,place_order
+can uhelp melocate order {{Order Number}},track_order,cancel_order
+is it possible to crewate a gold account,create_account,delete_account
+can I edi order {{Order Number}}?,change_order,cancel_order
+when can I expect a refund,get_refund,delivery_period
+how do i restore my account passwodr,recover_password,delete_account
+I am  having an error trying to register,registration_problems,change_shipping_address

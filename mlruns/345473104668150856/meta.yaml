@@ -1,0 +1,9 @@
+artifact_location: file:///E:/SICIP%20MLDL/project2/supportbot/supportbot/mlruns/345473104668150856
+creation_time: 1795522479544
+effective_trace_archival_retention: null
+experiment_id: '345473104668150856'
+last_update_time: 1795522479544
+lifecycle_stage: active
+name: supportbot-intent-classification
+trace_location: null
+workspace: default

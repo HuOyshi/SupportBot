@@ -1,0 +1,92 @@
+{
+  "kind": "transformer_scratch",
+  "run_name": "transformer_scratch_subword",
+  "run_id": "36d354822a26427693f7efb4898487ff",
+  "temperature": 0.5526814857144604,
+  "ood_method": "energy",
+  "ood_temperature": 0.5526814857144604,
+  "ood_threshold": 5.439988113765248,
+  "metrics": {
+    "train_time_sec": 362.19527673721313,
+    "latency_ms_per_query": 2.4999427795410156,
+    "val_accuracy": 0.997563946406821,
+    "val_macro_f1": 0.9974905106664361,
+    "test_accuracy": 0.9983766233766234,
+    "test_macro_f1": 0.998274011079578,
+    "test_noisy_accuracy": 0.9898538961038961,
+    "test_noisy_macro_f1": 0.9897753876835416,
+    "robustness_drop_f1": 0.008498623396036464,
+    "oos_msp_val_auroc": 0.9993666260657734,
+    "oos_msp_test_auroc": 0.9982305194805194,
+    "oos_msp_test_fpr_at_95tpr": 0.003,
+    "oos_temp_msp_val_auroc": 0.9990946000812018,
+    "oos_temp_msp_test_auroc": 0.9978859577922078,
+    "oos_temp_msp_test_fpr_at_95tpr": 0.003,
+    "oos_energy_val_auroc": 0.9995533901745838,
+    "oos_energy_test_auroc": 0.9982970779220779,
+    "oos_energy_test_fpr_at_95tpr": 0.003,
+    "temperature": 0.5526814857144604,
+    "oos_test_auroc": 0.9982970779220779,
+    "oos_test_fpr_at_95tpr": 0.003,
+    "oos_test_recall": 0.997,
+    "in_scope_test_accept": 0.9468344155844156,
+    "ece_test_raw": 0.06258649194774146,
+    "ece_test_temperature": 0.0010539097181199422,
+    "model_size_mb": 13.314746,
+    "n_parameters": 3155867
+  },
+  "ood_details": {
+    "temperature": 0.5526814857144604,
+    "chosen": "energy",
+    "methods": {
+      "msp": {
+        "temperature": 1.0,
+        "threshold": 0.9093842440063142,
+        "val": {
+          "auroc": 0.9993666260657734,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 1.0,
+          "in_scope_accept": 0.949654892407633
+        },
+        "test": {
+          "auroc": 0.9982305194805194,
+          "fpr_at_95tpr": 0.003,
+          "oos_recall": 0.997,
+          "in_scope_accept": 0.950487012987013
+        }
+      },
+      "temp_msp": {
+        "temperature": 0.5526814857144604,
+        "threshold": 0.998745920393593,
+        "val": {
+          "auroc": 0.9990946000812018,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 1.0,
+          "in_scope_accept": 0.949654892407633
+        },
+        "test": {
+          "auroc": 0.9978859577922078,
+          "fpr_at_95tpr": 0.003,
+          "oos_recall": 0.997,
+          "in_scope_accept": 0.9512987012987013
+        }
+      },
+      "energy": {
+        "temperature": 0.5526814857144604,
+        "threshold": 5.439988113765248,
+        "val": {
+          "auroc": 0.9995533901745838,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 1.0,
+          "in_scope_accept": 0.949654892407633
+        },
+        "test": {
+          "auroc": 0.9982970779220779,
+          "fpr_at_95tpr": 0.003,
+          "oos_recall": 0.997,
+          "in_scope_accept": 0.9468344155844156
+        }
+      }
+    }
+  }
+}

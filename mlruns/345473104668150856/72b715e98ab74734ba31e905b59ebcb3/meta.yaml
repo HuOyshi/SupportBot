@@ -1,0 +1,14 @@
+artifact_uri: file:///E:/SICIP%20MLDL/project2/supportbot/supportbot/mlruns/345473104668150856/72b715e98ab74734ba31e905b59ebcb3/artifacts
+end_time: 1795522960482
+entry_point_name: ''
+experiment_id: '345473104668150856'
+lifecycle_stage: active
+run_id: 72b715e98ab74734ba31e905b59ebcb3
+run_name: transformer_scratch_word
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795522497974
+status: 3
+tags: []
+user_id: Hp
