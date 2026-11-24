@@ -1,0 +1,149 @@
+{
+  "kind": "tfidf_logreg",
+  "run_name": "tfidf_logreg",
+  "run_id": "68c95c53f53246bc93cb6d4ec8db22e9",
+  "labels": [
+    "cancel_order",
+    "change_order",
+    "change_shipping_address",
+    "check_cancellation_fee",
+    "check_invoice",
+    "check_payment_methods",
+    "check_refund_policy",
+    "complaint",
+    "contact_customer_service",
+    "contact_human_agent",
+    "create_account",
+    "delete_account",
+    "delivery_options",
+    "delivery_period",
+    "edit_account",
+    "get_invoice",
+    "get_refund",
+    "newsletter_subscription",
+    "payment_issue",
+    "place_order",
+    "recover_password",
+    "registration_problems",
+    "review",
+    "set_up_shipping_address",
+    "switch_account",
+    "track_order",
+    "track_refund"
+  ],
+  "category": {
+    "get_refund": "REFUND",
+    "check_payment_methods": "PAYMENT",
+    "check_refund_policy": "REFUND",
+    "edit_account": "ACCOUNT",
+    "review": "FEEDBACK",
+    "get_invoice": "INVOICE",
+    "check_invoice": "INVOICE",
+    "set_up_shipping_address": "SHIPPING",
+    "recover_password": "ACCOUNT",
+    "registration_problems": "ACCOUNT",
+    "check_cancellation_fee": "CANCEL",
+    "switch_account": "ACCOUNT",
+    "track_refund": "REFUND",
+    "create_account": "ACCOUNT",
+    "newsletter_subscription": "SUBSCRIPTION",
+    "place_order": "ORDER",
+    "complaint": "FEEDBACK",
+    "contact_customer_service": "CONTACT",
+    "track_order": "ORDER",
+    "change_shipping_address": "SHIPPING",
+    "change_order": "ORDER",
+    "delete_account": "ACCOUNT",
+    "delivery_period": "DELIVERY",
+    "payment_issue": "PAYMENT",
+    "delivery_options": "DELIVERY",
+    "contact_human_agent": "CONTACT",
+    "cancel_order": "ORDER"
+  },
+  "temperature": 0.5156732244854967,
+  "ood_method": "energy",
+  "ood_temperature": 0.5156732244854967,
+  "ood_threshold": 4.832455957999558,
+  "metrics": {
+    "train_time_sec": 9.348540782928467,
+    "latency_ms_per_query": 1.2436819076538086,
+    "val_accuracy": 0.9979699553390174,
+    "val_macro_f1": 0.9979518952734147,
+    "test_accuracy": 0.997564935064935,
+    "test_macro_f1": 0.9975735952192322,
+    "test_noisy_accuracy": 0.992288961038961,
+    "test_noisy_macro_f1": 0.9920993728446177,
+    "robustness_drop_f1": 0.005474222374614479,
+    "oos_msp_val_auroc": 0.9990864799025578,
+    "oos_msp_test_auroc": 0.9976185064935065,
+    "oos_msp_test_fpr_at_95tpr": 0.006,
+    "oos_temp_msp_val_auroc": 0.9982257409663013,
+    "oos_temp_msp_test_auroc": 0.9965807629870129,
+    "oos_temp_msp_test_fpr_at_95tpr": 0.007,
+    "oos_energy_val_auroc": 0.999293544457978,
+    "oos_energy_test_auroc": 0.9973120941558442,
+    "oos_energy_test_fpr_at_95tpr": 0.006,
+    "temperature": 0.5156732244854967,
+    "oos_test_auroc": 0.9973120941558442,
+    "oos_test_fpr_at_95tpr": 0.006,
+    "oos_test_recall": 0.956,
+    "in_scope_test_accept": 0.997564935064935,
+    "ece_test_raw": 0.008869764647948863,
+    "ece_test_temperature": 0.0014181484555723439,
+    "model_size_mb": 5.404133
+  },
+  "ood_details": {
+    "temperature": 0.5156732244854967,
+    "chosen": "energy",
+    "methods": {
+      "msp": {
+        "temperature": 1.0,
+        "threshold": 0.6355479646150111,
+        "val": {
+          "auroc": 0.9990864799025578,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 0.98,
+          "in_scope_accept": 0.9947218838814454
+        },
+        "test": {
+          "auroc": 0.9976185064935065,
+          "fpr_at_95tpr": 0.006,
+          "oos_recall": 0.915,
+          "in_scope_accept": 0.9971590909090909
+        }
+      },
+      "temp_msp": {
+        "temperature": 0.5156732244854967,
+        "threshold": 0.9011979713748749,
+        "val": {
+          "auroc": 0.9982257409663013,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 0.92,
+          "in_scope_accept": 0.9947218838814454
+        },
+        "test": {
+          "auroc": 0.9965807629870129,
+          "fpr_at_95tpr": 0.007,
+          "oos_recall": 0.857,
+          "in_scope_accept": 0.9967532467532467
+        }
+      },
+      "energy": {
+        "temperature": 0.5156732244854967,
+        "threshold": 4.832455957999558,
+        "val": {
+          "auroc": 0.999293544457978,
+          "fpr_at_95tpr": 0.0,
+          "oos_recall": 0.98,
+          "in_scope_accept": 0.9947218838814454
+        },
+        "test": {
+          "auroc": 0.9973120941558442,
+          "fpr_at_95tpr": 0.006,
+          "oos_recall": 0.956,
+          "in_scope_accept": 0.997564935064935
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ mlflow:
 # Out-of-scope (OOS) detection: a message is rejected when its score is below a
 # threshold chosen so that `keep_in_scope` of in-scope VALIDATION messages pass.
 ood:
-  keep_in_scope: 0.95
+  keep_in_scope: 0.995
   method: auto        # msp | temp_msp | energy | auto (= best AUROC on the out-of-scope VALIDATION set)
 
 # Each entry is one MLflow run. Set enabled: false to skip a run.

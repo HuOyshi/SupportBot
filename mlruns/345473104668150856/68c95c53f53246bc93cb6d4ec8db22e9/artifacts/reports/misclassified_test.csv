@@ -1,0 +1,7 @@
+text,true,predicted
+help creating account,registration_problems,create_account
+need help with switching some articles of an order,change_order,place_order
+hep changing some products of an order,change_order,place_order
+semd me bill #00108,get_invoice,check_invoice
+when can I expect a refund,get_refund,delivery_period
+how can i tfack purchase {{Order Number}},track_order,change_order

@@ -1,0 +1,41 @@
+model,method,rule,threshold,val_in_accept,val_oos_reject,samples_in_accepted,samples_oos_rejected
+tfidf_logreg,energy,keep 0.95,7.0266,0.9497,1.0,7/16,4/4
+tfidf_logreg,energy,keep 0.99,5.6049,0.9898,0.99,8/16,4/4
+tfidf_logreg,energy,keep 0.995,4.8325,0.9947,0.98,11/16,4/4
+tfidf_logreg,energy,keep 0.999,3.596,0.9988,0.89,12/16,3/4
+tfidf_logreg,energy,youden,5.1931,0.9931,0.99,9/16,4/4
+tfidf_logreg,temp_msp,keep 0.95,0.9994,0.9497,1.0,7/16,4/4
+tfidf_logreg,temp_msp,keep 0.99,0.9742,0.9898,0.98,11/16,4/4
+tfidf_logreg,temp_msp,keep 0.995,0.9012,0.9947,0.92,12/16,4/4
+tfidf_logreg,temp_msp,keep 0.999,0.6046,0.9988,0.6,13/16,3/4
+tfidf_logreg,temp_msp,youden,0.9877,0.9882,0.99,11/16,4/4
+transformer_scratch_subword,energy,keep 0.95,5.44,0.9497,1.0,5/16,4/4
+transformer_scratch_subword,energy,keep 0.99,4.5039,0.9898,1.0,11/16,4/4
+transformer_scratch_subword,energy,keep 0.995,4.0262,0.9947,0.97,11/16,4/4
+transformer_scratch_subword,energy,keep 0.999,3.664,0.9988,0.94,12/16,4/4
+transformer_scratch_subword,energy,youden,4.3464,0.9915,1.0,11/16,4/4
+transformer_scratch_subword,temp_msp,keep 0.95,0.9987,0.9497,1.0,4/16,4/4
+transformer_scratch_subword,temp_msp,keep 0.99,0.9824,0.9898,1.0,9/16,4/4
+transformer_scratch_subword,temp_msp,keep 0.995,0.9387,0.9947,0.94,11/16,4/4
+transformer_scratch_subword,temp_msp,keep 0.999,0.8426,0.9988,0.83,12/16,4/4
+transformer_scratch_subword,temp_msp,youden,0.9815,0.9907,1.0,10/16,4/4
+transformer_scratch_word,energy,keep 0.95,5.4032,0.9497,0.9,5/16,4/4
+transformer_scratch_word,energy,keep 0.99,4.3589,0.9898,0.79,9/16,4/4
+transformer_scratch_word,energy,keep 0.995,3.877,0.9947,0.66,11/16,4/4
+transformer_scratch_word,energy,keep 0.999,3.2584,0.9988,0.29,12/16,1/4
+transformer_scratch_word,energy,youden,5.4564,0.9391,0.94,5/16,4/4
+transformer_scratch_word,temp_msp,keep 0.95,0.9962,0.9497,0.96,5/16,4/4
+transformer_scratch_word,temp_msp,keep 0.99,0.8816,0.9898,0.69,10/16,3/4
+transformer_scratch_word,temp_msp,keep 0.995,0.7669,0.9947,0.55,11/16,1/4
+transformer_scratch_word,temp_msp,keep 0.999,0.6023,0.9988,0.39,12/16,1/4
+transformer_scratch_word,temp_msp,youden,0.9958,0.9553,0.96,5/16,4/4
+naive_bayes_scratch,energy,keep 0.95,-150.7162,0.9497,0.01,16/16,0/4
+naive_bayes_scratch,energy,keep 0.99,-179.8598,0.9898,0.0,16/16,0/4
+naive_bayes_scratch,energy,keep 0.995,-198.2477,0.9947,0.0,16/16,0/4
+naive_bayes_scratch,energy,keep 0.999,-244.4515,0.9988,0.0,16/16,0/4
+naive_bayes_scratch,energy,youden,-261.1012,1.0,0.0,16/16,0/4
+naive_bayes_scratch,temp_msp,keep 0.95,0.9733,0.9497,0.98,10/16,4/4
+naive_bayes_scratch,temp_msp,keep 0.99,0.5937,0.9898,0.73,14/16,3/4
+naive_bayes_scratch,temp_msp,keep 0.995,0.4742,0.9947,0.61,14/16,2/4
+naive_bayes_scratch,temp_msp,keep 0.999,0.2931,0.9988,0.34,15/16,2/4
+naive_bayes_scratch,temp_msp,youden,0.9667,0.9533,0.98,10/16,4/4
