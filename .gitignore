@@ -1,0 +1,25 @@
+# Data is downloaded by src/data_download.py - never commit it
+data/*
+!data/.gitkeep
+
+# Trained models (re-created by src/train.py). mlruns/ IS committed (course requirement).
+models/*
+!models/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+
+# Python / environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.env
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
